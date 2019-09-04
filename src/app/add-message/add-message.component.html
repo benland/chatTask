@@ -1,0 +1,6 @@
+<form (submit)="sendMessage()">
+  <mat-form-field class="example-full-width" floatLabel="never">
+    <input  type="text" matInput placeholder="Replay..." [(ngModel)]="message" name="message">
+    <mat-icon matSuffix (click)="sendMessage()">send</mat-icon>
+  </mat-form-field>
+</form>

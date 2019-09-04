@@ -1,0 +1,16 @@
+
+:host {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+aside {
+  flex-basis: 350px;
+}
+
+.chat-area {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}

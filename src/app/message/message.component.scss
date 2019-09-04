@@ -1,0 +1,18 @@
+:host {
+  display: flex;
+}
+
+span {
+  background: blue;
+  padding: 10px;
+  margin: 10px;
+}
+
+:host.self {
+  span {
+    background-color: red;
+    justify-content: flex-end;
+  }
+
+  justify-content: flex-end;
+}

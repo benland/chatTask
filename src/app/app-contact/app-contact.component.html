@@ -1,0 +1,7 @@
+<mat-card [class.mat-elevation-z]="minimal">
+  <mat-card-header>
+    <div mat-card-avatar class="contact-icon" [style.backgroundColor]="contact.color"></div>
+    <mat-card-title>{{contact.name}}</mat-card-title>
+    <mat-card-subtitle *ngIf="!minimal">{{contact.messages.length ? contact.messages[contact.messages.length-1].text : 'You haven\'t chat yet'}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>

@@ -1,0 +1,5 @@
+<h3>Messages</h3>
+<section class="contacts-list">
+  <app-app-contact *ngFor="let contact of contacts; trackBy: trackByFn" [contact]="contact" (click)="contactSelected.emit(contact)">
+  </app-app-contact>
+</section>
