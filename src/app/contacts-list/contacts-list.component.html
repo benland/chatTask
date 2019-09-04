@@ -1,0 +1,8 @@
+<h3>Messages</h3>
+<section class="contacts-list">
+  <app-contact *ngFor="let contact of contacts; trackBy: trackByFn"
+                   [contact]="contact"
+                   [selected]="contact.id === selectedId"
+                   (click)="selectContact(contact)">
+  </app-contact>
+</section>

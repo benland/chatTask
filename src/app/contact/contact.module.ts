@@ -1,16 +1,16 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AppContactComponent } from './app-contact.component';
+import { ContactComponent } from './contact.component';
 import { MatCardModule } from '@angular/material/card';
 
 @NgModule({
-  declarations: [AppContactComponent],
+  declarations: [ContactComponent],
   exports: [
-    AppContactComponent
+    ContactComponent
   ],
   imports: [
     CommonModule,
     MatCardModule
   ]
 })
-export class AppContactModule { }
+export class ContactModule { }

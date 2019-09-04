@@ -1,11 +1,18 @@
-<aside>
-  <app-app-contacts-list [contacts]="contacts" (contactSelected)="selectedContact = $event"></app-app-contacts-list>
-</aside>
-<section class="chat-area">
-  <ng-container *ngIf="selectedContact">
-    <app-app-contact [contact]="selectedContact" [minimal]="true"></app-app-contact>
-    <app-messages [messages]="selectedContact.messages"></app-messages>
-    <app-add-message (messageSent)="addMessage($event)"></app-add-message>
-  </ng-container>
-
-</section>
+<ng-container *ngIf="contacts; else loading">
+  <aside>
+    <app-contacts-list [contacts]="contacts" (contactSelected)="selectedContact = $event"></app-contacts-list>
+  </aside>
+  <section class="chat-area">
+    <ng-container *ngIf="selectedContact; else noContactSelected">
+      <app-contact [contact]="selectedContact" [minimal]="true"></app-contact>
+      <app-messages [messages]="selectedContact.messages"></app-messages>
+      <app-add-message (messageSent)="addMessage($event)"></app-add-message>
+    </ng-container>
+  </section>
+</ng-container>
+<ng-template #noContactSelected>
+  <p class="select-friend-message">Please select a friend to start conversation with.... :)</p>
+</ng-template>
+<ng-template #loading>
+  <mat-spinner></mat-spinner>
+</ng-template>

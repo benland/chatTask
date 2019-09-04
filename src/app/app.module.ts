@@ -2,12 +2,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { AppContactsListModule } from './app-contacts-list/app-contacts-list.module';
+import { ContactsListModule } from './contacts-list/contacts-list.module';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { AppContactModule } from './app-contact/app-contact.module';
+import { ContactModule } from './contact/contact.module';
 import { MessagesModule } from './messages/messages.module';
 import { AddMessageModule } from './add-message/add-message.module';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 @NgModule({
   declarations: [
@@ -15,12 +16,13 @@ import { AddMessageModule } from './add-message/add-message.module';
   ],
   imports: [
     BrowserModule,
-    AppContactsListModule,
+    ContactsListModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    AppContactModule,
+    ContactModule,
     MessagesModule,
     AddMessageModule,
+    MatProgressSpinnerModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

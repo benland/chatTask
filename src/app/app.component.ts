@@ -9,6 +9,7 @@ import { IChatContact } from './i-chat-contact.interface';
 })
 export class AppComponent implements OnInit {
   private contacts: IChatContact[];
+
   selectedContact: IChatContact;
 
   constructor(private chatContacts: ChatContactsService) {

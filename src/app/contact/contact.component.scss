@@ -1,0 +1,28 @@
+:host {
+  display: block;
+
+  &.selected mat-card {
+    background-color: #d3d3d3;
+  }
+}
+
+mat-card {
+  &:hover {
+    cursor: pointer;
+    background-color: lightgray;
+  }
+
+  ::ng-deep .mat-card-header-text {
+    overflow: hidden;
+  }
+
+  ::ng-deep mat-card-subtitle {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+}
+
+
+
+

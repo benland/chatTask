@@ -7,10 +7,25 @@
 
 aside {
   flex-basis: 350px;
+  max-width: 350px;
 }
 
 .chat-area {
   display: flex;
   flex: 1;
   flex-direction: column;
+}
+
+
+mat-spinner {
+  align-self: center;
+  margin: 0 auto;
+}
+
+.select-friend-message {
+  display: flex;
+  flex: 1;
+  justify-content: center;
+  align-items: center;
+  font-size: 20px;
 }
